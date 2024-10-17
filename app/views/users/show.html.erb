@@ -1,0 +1,7 @@
+<%= render "users/tabs", user: current_user %>
+
+<h2>Own photos</h2>
+
+  <% @user.own_photos.each do |photo| %>
+    <%= render "photos/photo", photo: photo %>
+  <% end %>
