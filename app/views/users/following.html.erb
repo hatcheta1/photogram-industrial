@@ -1,0 +1,15 @@
+<%= render "users/tabs", user: current_user %>
+
+<h1>
+  Following
+</h1>
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <ul class="list-group">
+      <% @user.accepted_sent_follow_requests.each do |follow_request| %>
+        <li class="list-group-item"><%= follow_request.recipient.username %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

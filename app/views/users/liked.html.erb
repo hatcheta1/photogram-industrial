@@ -1,0 +1,7 @@
+<%= render "users/tabs", user: current_user %>
+
+<h2>Liked photos</h2>
+
+  <% @user.liked_photos.each do |photo| %>
+    <%= render "photos/photo", photo: photo %>
+  <% end %>
